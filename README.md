@@ -6,10 +6,6 @@ Built with **React**, **Node.js**, **Express**, and **MySQL**.
 
 ---
 
-
-
----
-
 ## 📌 Features
 
 ### 👤 Student
