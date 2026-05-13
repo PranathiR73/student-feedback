@@ -93,51 +93,40 @@ student-feedback/
 ## ⚙️ Setup Instructions
 
 ### 🧑‍💻 Prerequisites
-- Node.js and npm installed
-- MySQL Server installed and running
-- (Optional) Postman or ThunderClient for API testing
-
-Setup Instructions
-
-1. Clone Project
-
+- Node.js , Mysql  and npm installed
+1. Clone the project:
+```bash
 git clone https://github.com/PranathiR73/student-feedback.git
 cd student-feedback
-2. Setup MySQL Database
-
-Open MySQL and run:
+Setup MySQL database:
+sql
 
 CREATE DATABASE student_feedback;
 USE student_feedback;
-Then run the SQL file:
-
+Run:
 student_feedback/backend/server/database_queries/Schema.sql
-3. Backend Setup
-
-Go to backend folder:
+Setup backend:
+bash
 
 cd student_feedback/backend/server
 npm install
-Create .env file:
+npm start
+Create .env in backend folder:
 
+.env
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=your_mysql_password
 DB_NAME=student_feedback
 PORT=3001
-Start backend:
 
-npm start
-Backend runs at:
-
-http://localhost:3001
-4. Frontend Setup
-
-Open another terminal:
-
+Setup frontend:
+bash
 cd student_feedback
 npm install
 npm start
-Frontend runs at:
+Frontend: http://localhost:3000
+Backend: http://localhost:3001
 
-http://localhost:3000
+- MySQL Server installed and running
+- (Optional) Postman or ThunderClient for API testing
