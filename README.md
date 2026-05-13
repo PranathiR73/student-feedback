@@ -52,36 +52,46 @@ Built with **React**, **Node.js**, **Express**, and **MySQL**.
 ---
 
 ## 🗂️ Project Structure
-```bash
-INTERSHIP_NG/
-├── student_feedback/                  # React client
+student-feedback/
+├── student_feedback/
 │   ├── public/
+│   │   ├── index.html
+│   │   ├── manifest.json
+│   │   ├── robots.txt
+│   │   └── _redirects
 │   ├── src/
-│   │   ├── assets/                    # Logos, background images
+│   │   ├── assets/
 │   │   ├── components/
-│   │   │   ├── admin/
-│   │   │   ├── common/                # Header, Sidebar (shared)
-│   │   │   ├── faculty/               # Recharts components
-│   │   │   └── student/               # SubjectTable, etc.
-│   │   ├── context/                   # AuthContext.js
-│   │   ├── data/                      # Dummy course/subject data
+│   │   │   ├── common/
+│   │   │   ├── faculty/
+│   │   │   └── student/
+│   │   ├── context/
+│   │   │   └── AuthContext.js
 │   │   ├── Pages/
 │   │   │   ├── Admin/
 │   │   │   ├── Faculty/
-│   │   │   └── Student/               # Login, Dashboard, Settings, FeedbackForm
-│   │   ├── routes/                    # ProtectedRoute.jsx
+│   │   │   └── Student/
+│   │   ├── routes/
+│   │   │   └── ProtectedRoute.js
 │   │   ├── App.js
-│   │   ├── index.js
-│   │   └── tailwind.config.js
+│   │   └── index.js
+│   ├── backend/
+│   │   └── server/
+│   │       ├── dashboard_routes/
+│   │       ├── login_routes/
+│   │       ├── database_queries/
+│   │       │   ├── Schema.sql
+│   │       │   └── StoredProcedure.sql
+│   │       ├── db.js
+│   │       ├── server.js
+│   │       └── package.json
 │   ├── package.json
-│   └── README.md
-├── server/                            # Express backend
-│   ├── login_routes/                  # Role-based login routes
-│   ├── db.js                          # MySQL connection config
-│   └── server.js                      # Express server entry
-├── .gitignore
+│   └── tailwind.config.js
+├── netlify.toml
+├── README.md
 ├── LICENSE
-└── README.md                          # You're reading it 😉
+└── .gitignore
+
 ```
 
 ## ⚙️ Setup Instructions
@@ -91,31 +101,47 @@ INTERSHIP_NG/
 - MySQL Server installed and running
 - (Optional) Postman or ThunderClient for API testing
 
-### 📦 Backend Setup (`/server`)
-1. Navigate to server directory:
-```bash
-cd server
-npm install
+Setup Instructions
 
-```
-## Configure MySQL Database:
-```bash
-CREATE DATABASE feedback_system;
-```
-## Create .env file:
+1. Clone Project
+
+git clone https://github.com/PranathiR73/student-feedback.git
+cd student-feedback
+2. Setup MySQL Database
+
+Open MySQL and run:
+
+CREATE DATABASE student_feedback;
+USE student_feedback;
+Then run the SQL file:
+
+student_feedback/backend/server/database_queries/Schema.sql
+3. Backend Setup
+
+Go to backend folder:
+
+cd student_feedback/backend/server
+npm install
+Create .env file:
+
 DB_HOST=localhost
 DB_USER=root
-DB_PASSWORD=your_password
-DB_NAME=feedback_system
+DB_PASSWORD=your_mysql_password
+DB_NAME=student_feedback
+PORT=3001
+Start backend:
 
-### Start backend server:
- ```bash
-node server.js
-```
+npm start
+Backend runs at:
 
-## Navigate to frontend directory:
-   ```bash
-   cd student_feedback
-   npm install
-   npm start
-   ```
+http://localhost:3001
+4. Frontend Setup
+
+Open another terminal:
+
+cd student_feedback
+npm install
+npm start
+Frontend runs at:
+
+http://localhost:3000
