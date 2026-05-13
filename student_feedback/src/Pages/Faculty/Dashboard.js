@@ -62,14 +62,14 @@ const FacultyDashboard = () => {
 
       try {
         const theoryRes = await fetch(
-          `http://localhost:3001/api/faculty/theory-courses/${user.faculty_id}`
+          `https://student-feedback-production-60e2.up.railway.app/api/faculty/theory-courses/${user.faculty_id}`
         );
         const theoryCourses = await readJsonResponse(theoryRes);
 
         const theoryWithRatings = await Promise.all(
           theoryCourses.map(async (course) => {
             const res = await fetch(
-              `http://localhost:3001/api/faculty/avg-theory-rating/${user.faculty_id}/${course.course_id}`
+              `https://student-feedback-production-60e2.up.railway.app/api/faculty/avg-theory-rating/${user.faculty_id}/${course.course_id}`
             );
             const ratingData = await readJsonResponse(res);
             return {
@@ -82,14 +82,14 @@ const FacultyDashboard = () => {
         );
 
         const practicalRes = await fetch(
-          `http://localhost:3001/api/faculty/practical-courses/${user.faculty_id}`
+          `https://student-feedback-production-60e2.up.railway.app/api/faculty/practical-courses/${user.faculty_id}`
         );
         const practicalCourses = await readJsonResponse(practicalRes);
 
         const practicalWithRatings = await Promise.all(
           practicalCourses.map(async (course) => {
             const res = await fetch(
-              `http://localhost:3001/api/faculty/avg-practical-rating/${user.faculty_id}/${course.course_id}`
+              `https://student-feedback-production-60e2.up.railway.app/api/faculty/avg-practical-rating/${user.faculty_id}/${course.course_id}`
             );
             const ratingData = await readJsonResponse(res);
             return {

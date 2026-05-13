@@ -27,7 +27,7 @@ function AdminLoginPage() {
      }
      event.preventDefault();
 
-    fetch("http://localhost:3001/api/admin/login", {
+    fetch("https://student-feedback-production-60e2.up.railway.app/api/admin/login", {
       method: "POST",
       headers: {
           "Content-Type": "application/json"

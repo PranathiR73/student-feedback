@@ -19,7 +19,7 @@ function FacultyLoginPage() {
   function submitHandler(event) {
     event.preventDefault();
 
-    fetch("http://localhost:3001/api/faculty/login", {
+    fetch("https://student-feedback-production-60e2.up.railway.app/api/faculty/login", {
       method: "POST",
       headers: {
           "Content-Type": "application/json"

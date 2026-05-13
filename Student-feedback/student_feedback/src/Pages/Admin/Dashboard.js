@@ -32,7 +32,7 @@ const AdminDashboard = () => {
   const [averageCourseRating, setAverageCourseRating] = useState(0);
   const [totalCourseFeedbacks, setTotalCourseFeedbacks] = useState(0);
 
-  const API_URL = "http://localhost:3001/api/admin";
+  const API_URL = "https://student-feedback-production-60e2.up.railway.app/api/admin";
 
   // Fetch initial data
   useEffect(() => {
@@ -175,14 +175,14 @@ const AdminDashboard = () => {
 
     try {
       const theoryRes = await fetch(
-        `http://localhost:3001/api/faculty/theory-courses/${selectedRatingFaculty}`
+        `https://student-feedback-production-60e2.up.railway.app/api/faculty/theory-courses/${selectedRatingFaculty}`
       );
       const theoryCourses = await theoryRes.json();
 
       const theoryWithRatings = await Promise.all(
         theoryCourses.map(async (course) => {
           const res = await fetch(
-            `http://localhost:3001/api/faculty/avg-theory-rating/${selectedRatingFaculty}/${course.course_id}`
+            `https://student-feedback-production-60e2.up.railway.app/api/faculty/avg-theory-rating/${selectedRatingFaculty}/${course.course_id}`
           );
           const ratingData = await res.json();
           return {
@@ -194,14 +194,14 @@ const AdminDashboard = () => {
       );
 
       const practicalRes = await fetch(
-        `http://localhost:3001/api/faculty/practical-courses/${selectedRatingFaculty}`
+        `https://student-feedback-production-60e2.up.railway.app/api/faculty/practical-courses/${selectedRatingFaculty}`
       );
       const practicalCourses = await practicalRes.json();
 
       const practicalWithRatings = await Promise.all(
         practicalCourses.map(async (course) => {
           const res = await fetch(
-            `http://localhost:3001/api/faculty/avg-practical-rating/${selectedRatingFaculty}/${course.course_id}`
+            `https://student-feedback-production-60e2.up.railway.app/api/faculty/avg-practical-rating/${selectedRatingFaculty}/${course.course_id}`
           );
           const ratingData = await res.json();
           return {

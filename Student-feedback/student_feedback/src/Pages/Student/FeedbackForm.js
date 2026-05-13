@@ -70,7 +70,7 @@ const FeedbackForm = () => {
 
     try {
       const res = await fetch(
-        "http://localhost:3001/api/student/submit-feedback",
+        "https://student-feedback-production-60e2.up.railway.app/api/student/submit-feedback",
         {
           method: "POST",
           headers: {

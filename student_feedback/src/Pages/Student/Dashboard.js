@@ -38,7 +38,7 @@ const StudentDashboard = () => {
     setIsLoading(true);
     setErrorMessage("");
 
-    fetch(`http://localhost:3001/api/student/semester/${selectedSem}`, {
+    fetch(`https://student-feedback-production-60e2.up.railway.app/api/student/semester/${selectedSem}`, {
       signal: controller.signal,
     })
       .then(async (res) => {
@@ -76,7 +76,7 @@ const StudentDashboard = () => {
     setHistoryLoading(true);
     setHistoryError("");
 
-    fetch(`http://localhost:3001/api/student/feedback-history/${user.student_id}`, {
+    fetch(`https://student-feedback-production-60e2.up.railway.app/api/student/feedback-history/${user.student_id}`, {
       signal: controller.signal,
     })
       .then(async (res) => {
