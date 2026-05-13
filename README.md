@@ -6,8 +6,7 @@ Built with **React**, **Node.js**, **Express**, and **MySQL**.
 
 ---
 
-## 🔗 Live Demo
-👉 [View Demo](https://your-live-demo-link.com)
+
 
 ---
 
@@ -34,24 +33,7 @@ Built with **React**, **Node.js**, **Express**, and **MySQL**.
 - Access complete faculty/course reports
 - Export any dataset to CSV
 
----
-## 🖼️ Screenshots
 
-### Home Page
-<img width="800" alt="Home Page" src="https://github.com/user-attachments/assets/ae63729b-2b72-44d9-9551-fe85b7c854d8" />
-
-### Login Page
-<img width="800" alt="Login Page" src="https://github.com/user-attachments/assets/15b77515-078e-4ad4-b704-a3630f83444b" />
-
-### Student Dashboard
-<img width="800" alt="Student Dashboard" src="https://github.com/user-attachments/assets/4d62f6b1-2d8f-4fff-9db0-6e26d23dbd66" />
-
-### Faculty Dashboard
-<img width="800" alt="Faculty Dashboard" src="https://github.com/user-attachments/assets/b446903f-7ac8-4b04-b1c0-89c69126547b" />
-
-### Admin Dashboard
-<img width="800" alt="Admin Dashboard" src="https://github.com/user-attachments/assets/52d83e3c-6558-4827-847b-1e9e38b78aca" />
-## 🧰 Tech Stack
 
 ---
 
