@@ -5,8 +5,8 @@ import Sidebar from "../../components/common/Sidebar";
 import Header from "../../components/common/Header";
 
 const AdminDashboard = () => {
-  const [professors, setProfessors] = useState([]);
-  const [courses, setCourses] = useState([]);
+  const [, setProfessors] = useState([]);
+  const [, setCourses] = useState([]);
 
   // Faculty form state
   const [facultyName, setFacultyName] = useState("");
@@ -422,6 +422,5 @@ const AdminDashboard = () => {
 };
 
 export default AdminDashboard;
-
 
 
