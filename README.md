@@ -3,7 +3,6 @@
 A full-stack role-based student feedback platform that enables students to submit course feedback anonymously, while faculty and admins can view meaningful insights and visual reports.
 
 Built with **React**, **Node.js**, **Express**, and **MySQL**.
-
 ---
 
 ## 📌 Features
